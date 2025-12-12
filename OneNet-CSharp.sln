@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneNet-CSharp", "OneNet-CSharp\OneNet-CSharp.csproj", "{21B97DD3-7E4A-4F13-8E49-81B1D13EA28C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{21B97DD3-7E4A-4F13-8E49-81B1D13EA28C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21B97DD3-7E4A-4F13-8E49-81B1D13EA28C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21B97DD3-7E4A-4F13-8E49-81B1D13EA28C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21B97DD3-7E4A-4F13-8E49-81B1D13EA28C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
