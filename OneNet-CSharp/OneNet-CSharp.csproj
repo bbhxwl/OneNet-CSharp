@@ -8,6 +8,7 @@
         <Description>10086 onenet</Description>
         <PackageProjectUrl>https://github.com/bbhxwl/OneNet-CSharp</PackageProjectUrl>
         <RepositoryUrl>https://github.com/bbhxwl/OneNet-CSharp</RepositoryUrl>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     </PropertyGroup>
 
     <ItemGroup>
