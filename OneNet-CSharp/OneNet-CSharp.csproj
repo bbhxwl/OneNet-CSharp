@@ -4,6 +4,10 @@
         <TargetFramework>netstandard2.0</TargetFramework>
         <RootNamespace>OneNet_CSharp</RootNamespace>
         <LangVersion>latest</LangVersion>
+        <Authors>bbhxwl</Authors>
+        <Description>10086 onenet</Description>
+        <PackageProjectUrl>https://github.com/bbhxwl/OneNet-CSharp</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/bbhxwl/OneNet-CSharp</RepositoryUrl>
     </PropertyGroup>
 
     <ItemGroup>

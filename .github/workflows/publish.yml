@@ -1,0 +1,39 @@
+name: Publish to NuGet
+
+on:
+  workflow_dispatch:
+    inputs:
+      version_suffix:
+        description: 'Version Suffix (optional, e.g., alpha, beta)'
+        required: false
+        default: ''
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '10.0.x' # 使用较新的 .NET SDK 进行构建 (兼容 netstandard2.0)
+
+    - name: Restore dependencies
+      run: dotnet restore OneNet-CSharp/OneNet-CSharp.csproj
+
+    - name: Build
+      run: dotnet build OneNet-CSharp/OneNet-CSharp.csproj --configuration Release --no-restore
+
+    - name: Pack
+      run: |
+        VERSION_SUFFIX=""
+        if [ ! -z "${{ github.event.inputs.version_suffix }}" ]; then
+          VERSION_SUFFIX="--version-suffix ${{ github.event.inputs.version_suffix }}"
+        fi
+        dotnet pack OneNet-CSharp/OneNet-CSharp.csproj --configuration Release --no-build --output ./nupkgs $VERSION_SUFFIX
+
+    - name: Push to NuGet
+      run: dotnet nuget push ./nupkgs/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
