@@ -9,6 +9,7 @@
         <PackageProjectUrl>https://github.com/bbhxwl/OneNet-CSharp</PackageProjectUrl>
         <RepositoryUrl>https://github.com/bbhxwl/OneNet-CSharp</RepositoryUrl>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Version>1.0.1</Version>
     </PropertyGroup>
 
     <ItemGroup>
